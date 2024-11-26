@@ -10,7 +10,7 @@
  */
 typedef struct print_function
 {
-	char *specifier;
+	char specifier;
 	int (*f)(va_list arg);
 } print_func;
 

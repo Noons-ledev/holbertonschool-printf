@@ -34,7 +34,7 @@ return (1);
 }
 int _printf(const char *format, ...)
 {
-int print_func get_print[] = {
+print_func get_print[] = {
 {'c', print_char},
 {'s', print_string},
 {'\0', NULL}
