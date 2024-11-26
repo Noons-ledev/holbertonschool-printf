@@ -41,22 +41,28 @@ int _printf(const char *format, ...)
 		{'i', print_int},
 		{'\0', NULL}
 };
-va_list arg;
-int i = 0;
+int i = 0, j, count = 0;
+va_list args;
+va_start(args, format);
+while (format && format[i])
+{
+    if (format[i] == '%')
+    {
+    j = 0;
+    while (get_print[j].specifier != '\0')
+    {
+    if (format[i + 1] == get_print[j].specifier)
+    {
 
-	va_start(arg, format);
-
-	while (format && format[i])
-	{
-	if (format[i] == '%')
-	{
-	if (format[i + 1] == '\0')
-	{
-	va_end(arg);
-	return(-1);
-	}
-	else if (format[i + 1] != 's' && format[i + 1] != 'c' && format[i + 1] != '%')
-	{
-	va_end(arg);
-	return(-1);
-	}
+    count += get_print[j].f(args);
+    i += 2;
+    break;
+    }
+if (format[i + 1] != get_print[j].specifier)
+_putchar(format[i]);
+_putchar(format[i + 1]);
+count += 2;
+i += 2;
+break;
+ }
+j++;
