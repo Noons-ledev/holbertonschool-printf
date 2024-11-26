@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * struct print_function - a function with specifier for printf
+ * struct get_print - a function with specifier for printf
  * @specifier: char type pointer to specifier
  * @f: fonction type
  * Return: int

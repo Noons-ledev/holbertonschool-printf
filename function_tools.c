@@ -17,7 +17,7 @@ return (write(1, &c, 1));
 *@a: Integer to count through
 *Return: The length
 */
-int_length(int a)
+int _length(int a)
 {
 int count = 0;
 if (a < 0)
@@ -26,8 +26,7 @@ a = -a;
 count += 1;
 }
 if (a < 10)
-count += 1
-else
+count += 1;
 while (a >= 10)
 {
 count += 1;
