@@ -35,9 +35,7 @@ return (1);
 int _printf(const char *format, ...)
 {
 print_func get_print[] = {
-{'c', print_char},
-{'s', print_string},
-{'\0', NULL}
+{'c', print_char},{'s', print_string},{'\0', NULL}
 };
 int i = 0, j, count = 0;
 va_list args;
