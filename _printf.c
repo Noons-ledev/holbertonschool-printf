@@ -15,7 +15,7 @@ int print_char(va_list arg)
 
 int _printf(const char *format, ...)
 {
-int print_func printfunction[] = {
+int print_func print_function[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'d', print_double,
