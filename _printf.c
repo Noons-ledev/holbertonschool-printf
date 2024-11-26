@@ -33,12 +33,28 @@ int print_char(va_list arg)
 	_putchar(c);
 	return (1);
 }
-
+/**
+*print_percent- Prints a '%'
+*@args: List (to set as unused)
+*Return: (1)
+*/
+int print_percent(va_list args)
+{
+(void)args;
+_putchar('%');
+return (1);
+}
+/**
+* _printf - Prints to stdout depending on the input
+* @format: Input given to fct when call
+* Return: Total length of stdout
+*/
 int _printf(const char *format, ...)
 {
 	print_func get_print[] = {
 	{"c", print_char},
 	{"s", print_string},
+	{"%", print_percent},
 	{'\0', NULL}
 };
 
@@ -59,32 +75,16 @@ while (format && format[i])
 	i += 2;
 	break;
 	}
-	j++;
 	}
-	if (get_print[j].specifier == NULL)
-	{
-	if (format[i + 1] == '%')
-	{
-	_putchar('%');
-	count += 1;
-	i += 2;
 	}
 	else
 	{
 	_putchar(format[i]);
 	 _putchar(format[i + 1]);
-	 count += 2;
-	 i += 2;
+	 count++;
+	 i++;
 	}
 	}
-	}
-else
-{
-	_putchar(format[i]);
-	count++;
-	i++;
-}
-}
 va_end(args);
 return (count);
 }
