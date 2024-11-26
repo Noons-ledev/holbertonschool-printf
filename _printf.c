@@ -16,13 +16,14 @@ str = "(null)";
 while (str[i] != '\0')
 {
 _putchar(str[i]);
-i++
+i++;
 }
 return (i);
 }
 /**
  * print_char - print a character
- * @arg: argument
+ * @arg: Liste
+ *Return: 1 for a char
  */
 int print_char(va_list arg)
 {
@@ -31,25 +32,30 @@ int print_char(va_list arg)
 _putchar(c);
 return (1);
 }
-
 int _printf(const char *format, ...)
 {
 int print_func get_print[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'d', print_double},
-		{'i', print_int},
-		{'\0', NULL}
+{'c', print_char},
+{'s', print_string},
+{'\0', NULL}
 };
 int i = 0, j, count = 0;
 va_list args;
+if (format == NULL)
+return (0);
 va_start(args, format);
 while (format && format[i])
 {
 if (format[i] == '%')
 {
-j = 0;
-while (get_print[j].specifier != '\0')
+if (format[i + 1] == '%')
+{
+_putchar('%');
+count++;
+i += 2;
+continue;
+}
+for (j = 0; get_print[j].specifier != '\0'; j++)
 {
 if (format[i + 1] == get_print[j].specifier)
 {
@@ -57,14 +63,12 @@ count += get_print[j].f(args);
 i += 2;
 break;
 }
-if (format[i + 1] == '%')
-{
-_putchar('%');
-count += 1;
-i += 2;
-break;
-}
-j++;
 }
 }
+_putchar(format[i]);
+count++;
+i++;
+}
+va_end(args);
+return (count);
 }
