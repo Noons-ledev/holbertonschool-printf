@@ -5,14 +5,14 @@
 /**
  * struct print_function - a function with specifier for printf
  * @specifier: char type pointer to specifier
- * @f: fonction type
+ * @f: pointeur de fonction
  * Return: int
  */
 typedef struct print_function
 {
 	char *specifier;
 	int (*f)(va_list arg);
-}print_func;
+} print_func;
 
 int _printf(const char *format, ...);
 int print_char(va_list arg);
