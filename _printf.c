@@ -8,16 +8,17 @@
  */
 int print_char(va_list arg)
 {
-	char c = (char)va_arg(arg, int);
-	return (write(1, &c, 1));
+	char c = va_arg(arg, int);
+	_putchar(c);
+	return 1;
 }
 
 int _printf(const char *format, ...)
 {
-	print_t print_element[] = {
+int print_func printfunction[] = {
 		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
 		{'s', print_string},
+		{'d', print_double,
+		{'i', print_int},
 		{'\0', NULL}
 };

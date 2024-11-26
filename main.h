@@ -1,5 +1,5 @@
-#ifndef PRINTF_HOLBERTON_H
-#define PRINTF_HOLBERTON_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdarg.h>
 #include <stdio.h>
