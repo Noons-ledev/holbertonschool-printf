@@ -3,8 +3,27 @@
 #include <stdio.h>
 
 /**
+*print_string- prints a string
+*@arg: List of arguments we're passing through
+*Return: Length of the string
+*/
+int print_string(va_list arg)
+{
+int i = 0;
+char *str = va_arg(arg, char *);
+if (str == NULL)
+return (0);
+while (str[i] != '\0')
+{
+_putchar(str[i]);
+i++
+}
+return (i);
+}
+/**
  * print_char - print a character
  * @arg: argument
+ * Return: caracter
  */
 int print_char(va_list arg)
 {
@@ -15,7 +34,7 @@ int print_char(va_list arg)
 
 int _printf(const char *format, ...)
 {
-int print_func print_function[] = {
+	print_func get_print[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'d', print_double,
@@ -29,11 +48,15 @@ int i = 0;
 
 	while (format && format[i])
 	{
-	if (format[i] == '%' &&
-	(format[i + 1] != '\0' ||
-	(format[i + 1] != 's' && format[i + 1] != 'c' && format[i + 1] != '%')))
+	if (format[i] == '%')
 	{
-	return(-1)
+	if (format[i + 1] == '\0')
+	{
+	va_end(arg);
+	return(-1);
 	}
-	i++;
+	else if (format[i + 1] != 's' && format[i + 1] != 'c' && format[i + 1] != '%')
+	{
+	va_end(arg);
+	return(-1);
 	}

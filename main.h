@@ -10,7 +10,7 @@
  * @f: fonction type
  * Return: int
  */
-typedef struct print_function
+typedef struct get_print
 {
 	char *specifier;
 	int (*f)(va_list arg);
