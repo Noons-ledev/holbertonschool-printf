@@ -27,8 +27,9 @@ return (i);
 int print_char(va_list arg)
 {
 	char c = va_arg(arg, int);
-	_putchar(c);
-	return 1;
+
+_putchar(c);
+return (1);
 }
 
 int _printf(const char *format, ...)
@@ -45,18 +46,25 @@ va_list args;
 va_start(args, format);
 while (format && format[i])
 {
-    if (format[i] == '%')
-    {
-    j = 0;
-    while (get_print[j].specifier != '\0')
-    {
-    if (format[i + 1] == get_print[j].specifier)
-    {
-    count += get_print[j].f(args);
-    i += 2;
-    break;
-    }
-    j++;
-    }
-    }
+if (format[i] == '%')
+{
+j = 0;
+while (get_print[j].specifier != '\0')
+{
+if (format[i + 1] == get_print[j].specifier)
+{
+count += get_print[j].f(args);
+i += 2;
+break;
+}
+if (format[i + 1] == '%')
+{
+_putchar('%');
+count += 1;
+i += 2;
+break;
+}
+j++;
+}
+}
 }
