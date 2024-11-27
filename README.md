@@ -1,4 +1,4 @@
-### _printf - Custom printf function
+# _printf - Custom printf function
 
 ## Description
 This project implements a custom `printf` function in C that handles a subset of standard `printf` conversion specifiers. It includes the following files:
@@ -6,7 +6,8 @@ This project implements a custom `printf` function in C that handles a subset of
 - function_tools.c : File contains helper functions for _printf.c.
 - main.h : Header file containing function prototypes and struct definitions.
 
-# The _printf function supports the following conversion specifiers:
+# Supported Conversion Specifiers
+The _printf function supports the following conversion specifiers:
 
 ```c
 %c: Print a character.
@@ -19,7 +20,7 @@ This project implements a custom `printf` function in C that handles a subset of
 
 %i: Print an integer.
 ```
-Example usage of convertion specifiers:
+# Example usage of convertion specifiers
 
 ```c
 _printf("Character: %c\n", 'A'); return (0);
@@ -36,9 +37,9 @@ output : Decimal: 12345
 _printf("Percent sign: %%\n"); return (0);
 output : Percent sign: %
 ```
-# Definition of the print_func structure:
+# Structure Definition
 
-struct print_function: Structure which associates a format specifier (character) with a print function.
+struct print_func: Structure which associates a format specifier (character) with a print function.
 exemple:
 ```c
 /**
@@ -53,10 +54,10 @@ typedef struct print_function
 	int (*fct_pt)(va_list args);
 } print_func;
 ```
-# Prototype functions :
-
+# Prototype functions
+# _printf
 -int _printf(const char *format, ...); : Prototype of the _printf function.
-Main function it parses a format string, identifies format specifiers, and calls the appropriate functions to process each specifier.
+Parses a format string, identifies format specifiers, and calls the appropriate functions to process each specifier.
 
 Parameters :
 const char *format: Format string containing conversion specifiers.
@@ -64,15 +65,15 @@ const char *format: Format string containing conversion specifiers.
 ... : Variadic arguments to be printed according to the format specifiers.
 
 Return: The total number of characters printed.
-
+# print_char
 -int print_char(va_list args); : Prototype of the function to print a character.
-
+# print_string
 -int print_string(va_list args); : Prototype of the function for printing a string.
-
+# print_int
 -int print_int(va_list args); : Prototype function for printing an integer.
-
+# _putchar
 -int _putchar(char c); : Prototype function for writing a character to standard output.
-
+# print_percent
 -int print_percent(va_list args); : Prototype function for printing a percentage symbol.
 
 # functions_tools
@@ -95,3 +96,8 @@ Use of arrays to store integer digits: The print_int function uses an int_digits
 print_func structure : The print_func structure associates format specifiers with the corresponding print functions.
 
 # Authors
+
+
+
+
+
