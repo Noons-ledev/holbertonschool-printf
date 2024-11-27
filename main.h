@@ -5,7 +5,7 @@
 /**
  * struct print_function - a function with specifier for printf
  * @specifier: char type pointer to specifier
- * @f: pointeur de fonction
+ * @fct_pt: pointeur de fonction
  * Return: int
  */
 typedef struct print_function
