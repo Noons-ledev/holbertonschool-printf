@@ -1,0 +1,63 @@
+.Dt MAN_3_PRINTF      \" Program name and manual section number
+.Os MacOs Sequoia
+.Sh NAME                 \" Section Header - required - don't modify
+.Nm _printf(const char *format, ...);
+.Pp
+.Nm _printf
+.Sh DESCRIPTION          \" Section Header - required - don't modify
+This function formats and prints its output to stdout, identifying basic specifiers.
+When no valid specifier is encountered, _printf will print the specifier litteraly.
+.Pp                      \" Inserts a space
+Valid specifiers :
+.Bl -tag -width -indent  \" Begins a tagged list
+.It "%s"     \" Each item preceded by .It macro
+ Will print a string passed as an argument to the _printf function
+.It "%c"
+Will print a char passed as an argument to the _printf function.
+.Pp
+.It "%d"
+Will print an integer passed as an argument to the _printf function.
+.It "%i"
+Will also print an integer passed as an argument to the _printf function.
+.It "%%"
+Will print a single modulo as it is the natural behavior of printf function.
+.El                      \" Ends the list
+.Pp
+.Bl -tag -width -indent  \" Differs from above in tag removed
+.It va_list               \"-a flag as a list item
+is  the macro used to access arguments passed to _printf
+.El                      \" Ends the list
+.Sh  LIBRARY
+"main.h" is the local library needed to use this function
+.Pp
+.Sh RETURN
+Function will return the number of characters printed to stdout, or 0 for an error (e.g format is null)
+.Sh FILES                \" File used or created by the topic of the man page
+.Bl -tag -width "/Users/joeuser/Library/really_long_file_name" -compact
+.It main.h
+Header containing prototypes of the function used in the program 
+.It function_tools.c
+Contains the _putchar function used to print characters to stdout.
+.It _printf.c
+Contains the description of _printf function and all print functions related to it. 
+.El                      \" Ends the list
+.Sh EXAMPLES
+"_printf("Hello %s", "World");" instruction will print to stdout "Hello World" as the %s  is a valid specifier for a string.
+.Pp
+"_printf("Hello %x", "World");" Instruction will print to stdout "Hello %x" as %s is not a valid specifier.
+.Pp
+.Pp
+.Pp
+
+#include "main.h"
+
+.Pp
+
+int main(int argc, char **argv) {
+.Pp
+
+_printf("Hello, I'm %d years old", 15);
+.Pp
+return (0);
+.Pp 
+}
