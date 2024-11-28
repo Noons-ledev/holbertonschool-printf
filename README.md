@@ -11,7 +11,7 @@ To compile the code, use the following command:
 ```c
 "gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c"
 ```
-## requirements
+## Requirements
 
 All files have been programmed and tested in an Ubuntu 20.04 LTS environment and compiled using gcc.
 the code respects the Betty style.pl and betty-doc.pl requirements.
@@ -65,7 +65,7 @@ typedef struct print_function
 } print_func;
 ```
 ## Prototype functions
-# _printf
+## _printf
 -int _printf(const char *format, ...); : Prototype of the _printf function.
 Parses a format string, identifies format specifiers, and calls the appropriate functions to process each specifier.
 
@@ -75,15 +75,15 @@ const char *format: Format string containing conversion specifiers.
 ... : Variadic arguments to be printed according to the format specifiers.
 
 Return: The total number of characters printed.
-## print_char
+### print_char
 -int print_char(va_list args); : Prototype of the function to print a character.
-## print_string
+### print_string
 -int print_string(va_list args); : Prototype of the function for printing a string.
-## print_int
+### print_int
 -int print_int(va_list args); : Prototype function for printing an integer.
-## _putchar
+### _putchar
 -int _putchar(char c); : Prototype function for writing a character to standard output.
-## print_percent
+### print_percent
 -int print_percent(va_list args); : Prototype function for printing a percentage symbol.
 
 ## functions_tools
@@ -105,7 +105,8 @@ print_func structure : The print_func structure associates format specifiers wit
 ![Capture d’écran 2024-11-28 à 14 37 32](https://github.com/user-attachments/assets/32cfb4fc-9071-4961-9b93-aab0527e321a)
 
 ## flowchart
-![Capture d'écran 2024-11-28 153914](https://github.com/user-attachments/assets/3cd1d268-4a6d-4009-85fa-7bd8dfc766d8)
+![Capture d'écran 2024-11-28 211918](https://github.com/user-attachments/assets/9531bcfe-b127-4cd9-bc96-7eeb6d6c612e)
+
 
 ## Authors
 
