@@ -5,14 +5,6 @@ This project implements a custom `printf` function in C that handles a subset of
 - _printf.c : Main implementation of the `_printf` function.
 - function_tools.c : File contains helper functions for _printf.c.
 - main.h : Header file containing function prototypes and struct definitions.
-  
-## valgrind and test
-![Capture d'écran 2024-11-28 145059](https://github.com/user-attachments/assets/e08982f8-5075-4412-b628-c64baea405da)
-
-
-## man page
-![Capture d’écran 2024-11-28 à 14 37 32](https://github.com/user-attachments/assets/32cfb4fc-9071-4961-9b93-aab0527e321a)
-
 ## Compilation
 
 To compile the code, use the following command:
@@ -105,6 +97,12 @@ Handling negative integers and INT_MIN: The print_int function handles negative 
 Use of arrays to store integer digits: The print_int function uses an int_digits array to store the digits of an integer before printing them.
 
 print_func structure : The print_func structure associates format specifiers with the corresponding print functions.
+
+## valgrind and test
+![Capture d'écran 2024-11-28 145059](https://github.com/user-attachments/assets/e08982f8-5075-4412-b628-c64baea405da)
+
+## man page
+![Capture d’écran 2024-11-28 à 14 37 32](https://github.com/user-attachments/assets/32cfb4fc-9071-4961-9b93-aab0527e321a)
 
 ## Authors
 
