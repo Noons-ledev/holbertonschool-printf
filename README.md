@@ -5,6 +5,13 @@ This project implements a custom `printf` function in C that handles a subset of
 - _printf.c : Main implementation of the `_printf` function.
 - function_tools.c : File contains helper functions for _printf.c.
 - main.h : Header file containing function prototypes and struct definitions.
+  
+## valgrind and test
+![Capture d'écran 2024-11-28 145059](https://github.com/user-attachments/assets/e08982f8-5075-4412-b628-c64baea405da)
+
+
+## man page
+![Capture d’écran 2024-11-28 à 14 37 32](https://github.com/user-attachments/assets/32cfb4fc-9071-4961-9b93-aab0527e321a)
 
 ## Compilation
 
