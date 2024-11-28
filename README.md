@@ -104,6 +104,9 @@ print_func structure : The print_func structure associates format specifiers wit
 ## man page
 ![Capture d’écran 2024-11-28 à 14 37 32](https://github.com/user-attachments/assets/32cfb4fc-9071-4961-9b93-aab0527e321a)
 
+## flowchart
+![Capture d'écran 2024-11-28 153914](https://github.com/user-attachments/assets/3cd1d268-4a6d-4009-85fa-7bd8dfc766d8)
+
 ## Authors
 
 BRIET - Noah
