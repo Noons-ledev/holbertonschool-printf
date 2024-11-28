@@ -11,7 +11,7 @@ To compile the code, use the following command:
 ```c
 "gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c"
 ```
-## Requirements
+## Requirements 
 
 All files have been programmed and tested in an Ubuntu 20.04 LTS environment and compiled using gcc.
 the code respects the Betty style.pl and betty-doc.pl requirements.
