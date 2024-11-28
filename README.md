@@ -6,6 +6,17 @@ This project implements a custom `printf` function in C that handles a subset of
 - function_tools.c : File contains helper functions for _printf.c.
 - main.h : Header file containing function prototypes and struct definitions.
 
+## Compilation
+
+To compile the code, use the following command:
+```c
+"gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c"
+```
+## requirements
+
+All files have been programmed and tested in an Ubuntu 20.04 LTS environment and compiled using gcc.
+the code respects the Betty style.pl and betty-doc.pl requirements.
+
 ## Supported Conversion Specifiers
 The _printf function supports the following conversion specifiers:
 
@@ -23,21 +34,21 @@ The _printf function supports the following conversion specifiers:
 ## Example usage of convertion specifiers
 
 ```c
-_printf("Character: %c\n", 'A'); return (0);
+_printf("Character: %c\n", 'A');
 output : Character: A
 
-_printf("String: %s\n", "Hello, World!"); return (0);
+_printf("String: %s\n", "Hello, World!");
 output : String: Hello, World!
 
 _printf("Decimal: %d\n", 12345);
-_printf("Integer: %i\n", -67890); return (0);
+_printf("Integer: %i\n", -67890);
 output : Decimal: 12345
          Integer: -67890
 
-_printf("Percent sign: %%\n"); return (0);
+_printf("Percent sign: %%\n");
 output : Percent sign: %
 ```
-## Structure Definition
+## Struct Definition
 
 struct print_func: Structure which associates a format specifier (character) with a print function.
 exemple:
@@ -80,13 +91,6 @@ Return: The total number of characters printed.
 
 functions_tools.c contains utility functions that are crucial to the proper operation of the _printf function.
 
-
-## Compilation
-
-To compile the code, use the following command:
-```c
-"gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c"
-```
 ## Important points in the code
 
 Handling negative integers and INT_MIN: The print_int function handles negative integers and the special case of INT_MIN by using an unsigned int.
@@ -97,5 +101,5 @@ print_func structure : The print_func structure associates format specifiers wit
 
 ## Authors
 
--BRIET Noah
--DANIEL Alexandre
+BRIET - Noah
+DANIEL - Alexandre
