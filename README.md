@@ -95,7 +95,7 @@ Use of arrays to store integer digits: The print_int function uses an int_digits
 
 print_func structure : The print_func structure associates format specifiers with the corresponding print functions.
 
-## ��‍�� Authors
+## Authors
 
-BRIET - Noah
-DANIEL - Alexandre
+-BRIET Noah
+-DANIEL Alexandre
