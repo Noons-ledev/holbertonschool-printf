@@ -102,10 +102,12 @@ print_func structure : The print_func structure associates format specifiers wit
 ![Capture d'écran 2024-11-28 145059](https://github.com/user-attachments/assets/e08982f8-5075-4412-b628-c64baea405da)
 
 ## man page
-![Capture d’écran 2024-11-28 à 14 37 32](https://github.com/user-attachments/assets/32cfb4fc-9071-4961-9b93-aab0527e321a)
+![Capture d'écran 2024-11-29 110336](https://github.com/user-attachments/assets/736f56e7-c41e-424c-9fd1-2f567193d873)
+
 
 ## flowchart
-![Capture d'écran 2024-11-28 211918](https://github.com/user-attachments/assets/9531bcfe-b127-4cd9-bc96-7eeb6d6c612e)
+![Capture d'écran 2024-11-29 105908](https://github.com/user-attachments/assets/6fb5102f-b2be-4b56-83a6-bd8d1c16c6c7)
+
 
 
 ## Authors
