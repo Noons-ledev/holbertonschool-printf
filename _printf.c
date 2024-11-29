@@ -102,7 +102,7 @@ print_func get_print[] = {
 int i = 0, j, count = 0, match = 0;
 va_list args;
 if (format == NULL)
-return (0);
+return (-1);
 va_start(args, format);
 while (format[i] != '\0')
 {
