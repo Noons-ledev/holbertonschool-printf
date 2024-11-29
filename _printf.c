@@ -108,6 +108,8 @@ while (format[i] != '\0')
 {
 if (format[i] == '%')
 {
+if (!format[i + 1])
+return (-1);
 match = 0;
 for (j = 0; get_print[j].specifier != '\0'; j++)
 {
@@ -122,15 +124,13 @@ break;
 if (!match)
 {
 _putchar(format[i]);
-count++;
-i++;
+count++, i++;
 }
 }
 else
 {
 _putchar(format[i]);
-count++;
-i++;
+count++, i++;
 }
 }
 va_end(args);
